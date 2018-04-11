@@ -1,7 +1,7 @@
 # pureSoftwareDemo
 Author : Gurminder
 
-Clone the code at URL : 
+Clone the code at URL : https://github.com/Gurmindermultani/pureSoftwareDemo.git
 
 Steps to run the demo : 
 1) Run React Client Side Code by going into client/build and running http server ( e.g http-server - node module )
