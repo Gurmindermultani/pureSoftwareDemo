@@ -11,6 +11,6 @@ Steps to run the demo :
 
 3) Go to Client Side http-server ip : 
 	a) Add any number of items to cart( quantity in cart is not changeable, add more products from homepage)
-	b) Goto Cart and enter code : "killingspree" and then press apply code
+	b) Goto Cart and enter code : "killingspree"(buy 2 get 1 free) and then press apply code
 
 If you have any problem running the code call me at : 8800856840
