@@ -11,7 +11,19 @@ const makeSelectUsername = () => createSelector(
   (homeState) => homeState.get('username')
 );
 
+const makeSelectProducts = () => createSelector(
+  selectHome,
+  (homeState) => homeState.get('products')
+);
+
+const makeSelectCart = () => createSelector(
+  selectHome,
+  (homeState) => homeState.get('cart')
+);
+
 export {
   selectHome,
   makeSelectUsername,
+  makeSelectProducts,
+  makeSelectCart
 };

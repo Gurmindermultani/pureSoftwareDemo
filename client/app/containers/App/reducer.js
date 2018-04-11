@@ -26,6 +26,10 @@ const initialState = fromJS({
   userData: {
     repositories: false,
   },
+  cart : [],
+  total : 0,
+  discount : "",
+  payable : ""
 });
 
 function appReducer(state = initialState, action) {
@@ -44,6 +48,13 @@ function appReducer(state = initialState, action) {
       return state
         .set('error', action.error)
         .set('loading', false);
+    case "CART_LOADED":
+      // Delete prefixed '@' from the github username
+      return state
+        .set('cart', action.cart.items)
+        .set('total',action.cart.total)
+        .set('payable',action.cart.amountPayable ? action.cart.amountPayable : "")
+        .set('discount',action.cart.discount ? action.cart.discount : "");
     default:
       return state;
   }

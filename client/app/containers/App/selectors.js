@@ -28,6 +28,26 @@ const makeSelectRepos = () => createSelector(
   (globalState) => globalState.getIn(['userData', 'repositories'])
 );
 
+const makeSelectCart = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('cart')
+);
+
+const makeSelectTotal = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('total')
+);
+
+const makeSelectPayable = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('payable')
+);
+
+const makeSelectDiscount = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.get('discount')
+);
+
 const makeSelectLocation = () => createSelector(
   selectRoute,
   (routeState) => routeState.get('location').toJS()
@@ -40,4 +60,8 @@ export {
   makeSelectError,
   makeSelectRepos,
   makeSelectLocation,
+  makeSelectCart,
+  makeSelectTotal,
+  makeSelectPayable,
+  makeSelectDiscount
 };

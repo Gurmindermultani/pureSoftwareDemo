@@ -32,6 +32,19 @@ export function loadRepos() {
   };
 }
 
+export function loadProducts() {
+  return {
+    type: "LOAD_PRODUCTS",
+  };
+}
+
+export function productsLoaded(products) {
+  return {
+    type: "LOAD_PRODUCTS_SUCCESS",
+    products
+  };
+}
+
 /**
  * Dispatched when the repositories are loaded by the request saga
  *
@@ -59,5 +72,23 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error,
+  };
+}
+
+
+
+
+export function applyCodeAction(coupon,cart) {
+  return {
+    type: "APPLY_COUPON",
+    cart,
+    coupon,
+  };
+}
+
+export function cartLoaded(cart) {
+  return {
+    type: "CART_LOADED",
+    cart,
   };
 }

@@ -32,3 +32,12 @@ export function changeUsername(name) {
     name,
   };
 }
+
+export function addToCart(cart) {
+  return {
+    type: "ADD_TO_CART",
+    cart,
+  };
+}
+
+
